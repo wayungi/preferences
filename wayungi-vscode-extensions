@@ -16,7 +16,6 @@ Open the SSH connection menu
 When prompted for the SSH connection command, enter:  "ssh server-username@server-ip"
 VS Code will ask where to save the SSH configuration. Select: "/<home>/directory/.ssh/config" 
 
-
 ================================================================================================
 
 -----2-------
@@ -36,6 +35,22 @@ Enable automatic ShellCheck diagnostics
         you should see a warning similar to: SC2086: Double quote to prevent globbing and word splitting or a squigly line below $name
 	The final line deliberately contains a potential Bash issue: $name is not quoted.
 
+==================================================================================================
 
+------3------
+Configure GitHub Actions YAML validation
+GitHub Actions workflows are written in YAML. We want VS Code to detect formatting and 
+configuration problems before we push changes to GitHub.
+We'll use two tools:
+- YAML by Red Hat: Syntax checking, autocomplete, and schema validation.
+- actionlint: GitHub Actions-specific validation, including workflow structure and expressions.
+			  Unlike general YAML validation, actionlint understands GitHub Actions workflows.
+			It can detect invalid workflow structures, expression errors, and certain shell-script issues.
+
+extensions: install these extensions in VS Code
+	YAML (by Red Hat)	Validate and autocomplete YAML files
+	GitHub Actions.
+
+                                 
 
 
