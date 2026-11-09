@@ -1,0 +1,17 @@
+
+-------- 1 ---------
+Tool: VS Code Remote SSH
+Purpose: Edit server files directly from your laptop
+Installation: code --install-extension ms-vscode-remote.remote-ssh  (type command on terminal)
+
+--setup---
+--Connect VS Code to our Ubuntu server--
+
+We'll use the Remote SSH extension to connect to the vm as vmuser.
+Open the SSH connection menu
+	1. Open VS Code.
+	2. Press Ctrl + Shift + P to open the Command Palette.
+	3. Type "Remote-SSH: Connect to Host..." and select it.
+	4. Choose "Add New SSH Host..." if the server name isn't already listed.
+When prompted for the SSH connection command, enter:  "ssh server-username@server-ip"
+VS Code will ask where to save the SSH configuration. Select: "/<home>/directory/.ssh/config" 
