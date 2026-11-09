@@ -15,3 +15,27 @@ Open the SSH connection menu
 	4. Choose "Add New SSH Host..." if the server name isn't already listed.
 When prompted for the SSH connection command, enter:  "ssh server-username@server-ip"
 VS Code will ask where to save the SSH configuration. Select: "/<home>/directory/.ssh/config" 
+
+
+================================================================================================
+
+-----2-------
+Tool: ShellCheck	            
+Purpose: Automatically detect common Bash scripting problems    
+Installation: sudo apt update && sudo apt install -y shellcheck   (termial)
+Installation: search extensions for shellcheck (by Timon Wong) click install  
+This extension connects the ShellCheck analyzer to VS Code so warnings can appear directly in your Bash files.
+--- test---
+Enable automatic ShellCheck diagnostics
+	1. Create a file named shellcheck-test.sh and add:
+        #!/usr/bin/env bash
+        name="Notes API"
+        echo $name
+	1. Press Ctrl + Shift + M in VS Code. (probel panel)
+	If the ShellCheck extension is installed and active, 
+        you should see a warning similar to: SC2086: Double quote to prevent globbing and word splitting or a squigly line below $name
+	The final line deliberately contains a potential Bash issue: $name is not quoted.
+
+
+
+
